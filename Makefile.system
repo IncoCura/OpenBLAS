@@ -390,13 +390,13 @@ ifeq ($(F_COMPILER), GFORTRAN)
 # ifeq logical or. GCC or LSB
 ifeq ($(C_COMPILER), $(filter $(C_COMPILER),GCC LSB))
 EXPRECISION	= 1
-CCOMMON_OPT	+= -DEXPRECISION -m128bit-long-double
-FCOMMON_OPT	+= -m128bit-long-double
+CCOMMON_OPT	+= -DEXPRECISION -m128bit-long-double -L/usr/lib
+FCOMMON_OPT	+= -m128bit-long-double -L/usr/lib
 endif
 ifeq ($(C_COMPILER), CLANG)
 EXPRECISION	= 1
 CCOMMON_OPT	+= -DEXPRECISION
-FCOMMON_OPT	+= -m128bit-long-double
+FCOMMON_OPT	+= -m128bit-long-double -L/usr/lib
 endif
 endif
 endif
@@ -413,13 +413,13 @@ ifeq ($(F_COMPILER), GFORTRAN)
 # ifeq logical or. GCC or LSB
 ifeq ($(C_COMPILER), $(filter $(C_COMPILER),GCC LSB))
 EXPRECISION	= 1
-CCOMMON_OPT	+= -DEXPRECISION -m128bit-long-double
-FCOMMON_OPT	+= -m128bit-long-double
+CCOMMON_OPT	+= -DEXPRECISION -m128bit-long-double -L/usr/lib
+FCOMMON_OPT	+= -m128bit-long-double -L/usr/lib
 endif
 ifeq ($(C_COMPILER), CLANG)
 EXPRECISION	= 1
 CCOMMON_OPT	+= -DEXPRECISION
-FCOMMON_OPT	+= -m128bit-long-double
+FCOMMON_OPT	+= -m128bit-long-double -L/usr/lib
 endif
 endif
 endif
