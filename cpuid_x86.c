@@ -1649,7 +1649,7 @@ static char *lowercpuname[] = {
 };
 
 static char *corename[] = {
-  "UNKOWN",
+  "UNKNOWN",
   "80486",
   "P5",
   "P6",
@@ -2009,6 +2009,8 @@ int get_coretype(void){
 	switch (model) {
 	case 1:
 	  // AMD Ryzen
+	case 8:
+	  // Ryzen 2		
 	  if(support_avx())
 #ifndef NO_AVX2
 	    return CORE_ZEN;
